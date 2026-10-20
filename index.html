@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="PixelyGraphics — premium graphic design catalog and custom design services.">
+<title>PixelyGraphics — Creative Design Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Noto+Sans+Sinhala:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="toast" class="toast"></div>
+<header class="site-header">
+<a href="#home" class="brand"><span class="brand-mark">P</span><span>Pixely<span>Graphics</span></span></a>
+<nav class="nav"><a href="#home">Home</a><a href="#catalog">Catalog</a><a href="#about">About</a><a href="#faq">FAQ</a></nav>
+<div class="header-actions"><button class="icon-btn" id="themeBtn">☼</button><button class="lang-btn" id="langBtn">සිං</button><a class="whatsapp-btn" href="https://wa.me/94783120236" target="_blank">WhatsApp</a><button class="menu-btn">☰</button></div>
+</header>
+
+<main>
+<section id="home" class="section hero">
+<div class="hero-copy"><span class="eyebrow">PIXELYGRAPHICS • CREATIVE STUDIO</span>
+<h1>Designs that make<br><em>your brand stand out.</em></h1>
+<p>Premium graphic design crafted with clarity, creativity and a sharp visual identity.</p>
+<div class="hero-actions"><a href="#catalog" class="btn btn-primary">Explore Designs <span>↗</span></a><a href="#about" class="btn btn-ghost">About PixelyGraphics</a></div>
+<div class="hero-meta"><div><strong>09+</strong><span>Design Categories</span></div><div><strong>100%</strong><span>Custom Creative Work</span></div><div><strong>24/7</strong><span>WhatsApp Contact</span></div></div></div>
+<div class="hero-art"><div class="art-stack">
+<div class="floating-card card-one"><span>BRAND</span><strong>IDENTITY</strong><small>01 / 09</small></div>
+<div class="floating-card card-two"><span>CREATE</span><strong>YOUR<br>STORY.</strong><small>PIXELYGRAPHICS</small></div>
+<div class="floating-card card-three"><span>VISUAL</span><strong>IMPACT</strong><small>DESIGN STUDIO</small></div></div><div class="hero-orb"></div></div>
+</section>
+
+<section class="ticker"><div>LOGOS <span>✦</span> SOCIAL MEDIA <span>✦</span> FLYERS <span>✦</span> POSTERS <span>✦</span> BRANDING <span>✦</span> THUMBNAILS <span>✦</span> INVITATIONS <span>✦</span></div></section>
+
+<section id="catalog" class="section catalog-section">
+<div class="section-head"><div><span class="eyebrow">SELECTED WORKS</span><h2>Explore the catalog.</h2></div><p>Browse by category, preview a design, then place your order directly through WhatsApp.</p></div>
+<div class="catalog-tools"><div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search designs..."></div><div class="filters" id="filters"></div></div>
+<div class="product-grid" id="productGrid"></div><div class="empty-state" id="emptyState" hidden><div>⌕</div><h3>No designs found</h3><p>Try another search or category.</p></div>
+</section>
+
+<section id="about" class="section about-section"><div class="about-number">PG</div><div><span class="eyebrow">ABOUT PIXELYGRAPHICS</span><h2>Simple ideas.<br><em>Strong visuals.</em></h2><p>PixelyGraphics is a creative design studio focused on clean, memorable visuals for brands, creators and businesses. Every project is built to look professional and communicate clearly.</p><a href="https://wa.me/94783120236?text=Hello%20PixelyGraphics%2C%20I%27d%20like%20to%20discuss%20a%20custom%20design." target="_blank" class="btn btn-primary">Start a Project ↗</a></div></section>
+
+<section id="faq" class="section faq-section"><div class="section-head"><div><span class="eyebrow">FAQ</span><h2>Questions, answered.</h2></div></div>
+<div class="faq-list"><details><summary>How do I order a design?</summary><p>Open a design, select Order Now, complete your details and press Place Order. WhatsApp will open with your order information ready to send.</p></details>
+<details><summary>How do I send the payment slip?</summary><p>After placing the order, complete the bank payment and attach your payment slip in the same WhatsApp conversation.</p></details>
+<details><summary>Can I request a custom design?</summary><p>Yes. Use the WhatsApp contact button and describe what you need. PixelyGraphics can discuss the requirements and quote.</p></details></div></section>
+</main>
+
+<footer><div class="footer-brand"><span class="brand-mark">P</span><div><strong>PixelyGraphics</strong><small>Creative Design Studio</small></div></div><p>© <span id="year"></span> PixelyGraphics. All rights reserved.</p><a href="https://wa.me/94783120236" target="_blank">WhatsApp ↗</a></footer>
+<button class="floating-wa" id="floatingWa">◉</button>
+
+<div class="modal-backdrop" id="productModal"><div class="modal product-modal"><button class="close-btn" data-close="productModal">×</button><div class="product-detail"><div class="detail-image" id="detailImage"></div><div class="detail-copy"><span class="eyebrow" id="detailCategory"></span><h2 id="detailTitle"></h2><p id="detailDescription"></p><div class="detail-price" id="detailPrice"></div><div class="detail-actions"><button class="btn btn-primary" id="detailOrder">Order Now ↗</button><button class="btn btn-ghost" id="detailShare">Share</button></div></div></div></div></div>
+
+<div class="modal-backdrop" id="orderModal"><div class="modal order-modal"><button class="close-btn" data-close="orderModal">×</button>
+<div class="order-header"><span class="eyebrow">ORDER REQUEST</span><h2>Let's make it happen.</h2><p>Fill in your details. Your order will be prepared for WhatsApp.</p></div>
+<div class="selected-summary" id="selectedSummary"></div>
+<form id="orderForm"><div class="form-grid">
+<label>Full Name *<input name="name" required></label><label>WhatsApp Number *<input name="phone" required placeholder="07X XXX XXXX"></label>
+<label>Email<input name="email" type="email"></label><label>Preferred Delivery Date<input name="date" type="date"></label></div>
+<label>Custom Requirements<textarea name="requirements" rows="4" placeholder="Tell us any text, colors, sizes or other requirements..."></textarea></label>
+<div class="payment-box"><span class="eyebrow">BANK PAYMENT</span><h3>Payment details</h3><div class="bank-grid">
+<div><small>Bank</small><strong id="bankName"></strong></div><div><small>Account Name</small><strong id="accountName"></strong></div>
+<div><small>Account Number</small><strong id="accountNumber"></strong></div><div><small>Branch</small><strong id="branch"></strong></div></div>
+<button type="button" class="copy-bank" id="copyBank">Copy bank details</button><p>After payment, send the bank slip in the same WhatsApp chat.</p></div>
+<button class="btn btn-primary submit-order" type="submit">Place Order on WhatsApp ↗</button><p class="form-note">Your submitted details are used only to process this order request.</p></form>
+</div></div>
+<script src="script.js"></script>
+</body></html>
